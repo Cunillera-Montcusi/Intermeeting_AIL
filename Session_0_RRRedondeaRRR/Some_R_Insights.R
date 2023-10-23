@@ -206,12 +206,12 @@ load("bla/bla/bla/bla/bla/bla/bla/bla/bla/THE_NAME_OF_THE_THING.RData")
 getwd()
 setwd("C:/Users/bla/bla/bla/bla/bla/bla/bla")
 
-setwd("C:/Users/David CM/Dropbox/DAVID DOC/LLAM al DIA/1. FEHM coses al DIA/6. Infinite R")
+setwd("C:/Users/David CM/Dropbox/DAVID DOC/LLAM al DIA/X. Docència/2023/Intermeeting_Course/Intermeeting_AIL/Session_0_RRRedondeaRRR")
 
-load("1.load_data.RData")
+load("CESTES_Null.RData")
 
 # LOOK AT THE CONSOLE!
-load("C:/Users/David CM/Dropbox/DAVID DOC/LLAM al DIA/1. FEHM coses al DIA/6. Infinite R/1.load_data.RData")
+load("C:/Users/David CM/Dropbox/DAVID DOC/LLAM al DIA/X. Docència/2023/Intermeeting_Course/Intermeeting_AIL/CESTES_Null.RData")
 
 
 # Managing datasets from excel to R
