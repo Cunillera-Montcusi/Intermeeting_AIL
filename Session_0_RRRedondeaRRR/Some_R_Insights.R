@@ -1,0 +1,541 @@
+## HOLA! 
+#
+# So, here we are! We are Monday 23 (i hope) and we are late in the afternoon and tired about the whole traveling... but! 
+# Happy and excited to meet and begin this 3 days trip through ecology!!! 
+#  
+# But... who says "nice trip" through ecology might also mean... "numerical ecology" or "using R to later see ecological stuff"... 
+# Yes, I agree that it is always nicer to see the wonders that remain hidden in our ecosystems and try to guess how do they function...
+# how this small animal that has milions and milions of years of evolution on his DNA has arrived at that specific site in that 
+# specific moment and now is thriving and welcoming you, ready to discover and protect it of the terrible things that us are doing to it, 
+# you look at its eyes... it looks you back and... *WAKE UP!!!*
+#  
+# Stop dreaming bullshit! 
+# This is the real world! You are going to put that bug in alcohol to later look at it in the lab and then submerge yourself 
+# in R to try to understand WTF is going on!! 
+#  
+# SO! IT IS ALREADY TIME TO ASSUME THAT IT WAS NOT AS *David Attenborough* showed to you!! 
+# THIS IS NOT THE BBC! WE ARE IN THE FRONT LINE AND WE WANT TO SAVE THIS SMALL AND DISGUSTING THINGS FROM EXTINCTION!!!
+# SO.... let's use R :O) 
+#
+#Or at least, let's make our lives much more easier with R because at the end it is not 'that big deal' 
+#
+#SO, let's begin by the basics of the basics
+
+#### THE PROGRAM
+
+# Basic concepts of the program
+# The script 
+# Console
+# Environemnt
+
+# Files - Plots - Packages - Help 
+# Internet - stackoverflow etc etc etc  
+
+# THE PHILOSOPHY!!!!!!!
+# https://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html
+
+
+### The script and how to operate
+# Scripts
+## How to write stuff 
+
+Hola
+"Hola"
+#Hola 
+()
+{}
+[]
+
+3
+3
+3
+3
+
+(3+5)/5
+
+# Search  
+HOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLA
+HOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLA
+HOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAADEUHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLAHOLA
+
+
+# R BASICS - types of objects (most used ones)
+### https://rstudio-education.github.io/hopr/r-objects.html 
+
+## Vector
+c()
+
+# Numeric 
+c(1,2,3,4,5)
+
+# Character
+c("Hola","Adeu", "Benvingut")
+
+#Logical 
+c(TRUE, FALSE, TRUE)
+
+## Matrix 
+matrix()
+
+# --- "FUNCTIONS"!
+matrix()
+
+#HELP!
+#In the script
+?matrix()
+# Manually in the help search 
+# Using tab when writing the function 
+
+matrix(1,2,3)
+
+matrix(
+  c(1,2,3,4,5),
+  nrow =2, ncol = 5
+)
+
+matrix(
+  c(1,2,3,4,5),
+  nrow =5, ncol = 2
+)
+
+# Lists 
+
+list(
+  c(1,3,4,5,6,6),
+  c("Manolo","Paco","Lorenzo"),
+  "R és toh guapo",
+  c(TRUE, FALSE, TRUE, TRUE)
+)
+
+# Data.frame 
+# https://rstudio-education.github.io/hopr/r-objects.html#data-frames
+
+data.frame(  c(1,3,4,5,6,6),
+             c("Manolo","Paco","Lorenzo"),
+             "R és toh guapo",
+             c(TRUE, FALSE, TRUE, TRUE)
+)
+# Same lenghts
+data.frame(  c(1,3,4),
+             c("Manolo","Paco","Lorenzo"),
+             c(TRUE, FALSE, TRUE)
+)
+
+# Variables names
+data.frame( money= c(1,3,4),
+            names=  c("Manolo","Paco","Lorenzo"),
+            thief=  c(TRUE, FALSE, TRUE)
+)
+
+# Matrices vs DataFrames
+# https://www.geeksforgeeks.org/matrix-vs-dataframe-in-r/ Matrix vs DataFrame
+
+### Interact with objects 
+
+c(1,2,3,5)
+
+a <- c(1,2,3,5)
+a
+
+pots_posarli_el_nom_el_que_vulguis <- c(1,2,3,5)
+pots_posarli_el_nom_el_que_vulguis
+
+length(pots_posarli_el_nom_el_que_vulguis)
+
+pots_posarli_el_nom_el_que_vulguis[5]
+
+pots_posarli_el_nom_el_que_vulguis[5] <- 3
+
+
+
+el_data_frame_que_teniem_abans <- data.frame( money= c(1,3,4,6),
+                                              names=  c("Manolo","Paco","Lorenzo","Joan Antoni"),
+                                              thief=  c(TRUE, FALSE, TRUE,TRUE)
+)
+el_data_frame_que_teniem_abans
+
+el_data_frame_que_teniem_abans$money
+el_data_frame_que_teniem_abans$names
+
+length(el_data_frame_que_teniem_abans)
+
+colnames(el_data_frame_que_teniem_abans)
+
+nrow(el_data_frame_que_teniem_abans)
+ncol(el_data_frame_que_teniem_abans)
+
+
+
+my_super_cool_field_dataset <- data.frame(
+  face = c("king", "queen", "jack", "ten", "nine", "eight", "seven", "six",
+           "five", "four", "three", "two", "ace", "king", "queen", "jack", "ten", 
+           "nine", "eight", "seven", "six", "five", "four", "three", "two", "ace", 
+           "king", "queen", "jack", "ten", "nine", "eight", "seven", "six", "five", 
+           "four", "three", "two", "ace", "king", "queen", "jack", "ten", "nine", 
+           "eight", "seven", "six", "five", "four", "three", "two", "ace"),  
+  suit = c("spades", "spades", "spades", "spades", "spades", "spades", 
+           "spades", "spades", "spades", "spades", "spades", "spades", "spades", 
+           "clubs", "clubs", "clubs", "clubs", "clubs", "clubs", "clubs", "clubs", 
+           "clubs", "clubs", "clubs", "clubs", "clubs", "diamonds", "diamonds", 
+           "diamonds", "diamonds", "diamonds", "diamonds", "diamonds", "diamonds", 
+           "diamonds", "diamonds", "diamonds", "diamonds", "diamonds", "hearts", 
+           "hearts", "hearts", "hearts", "hearts", "hearts", "hearts", "hearts", 
+           "hearts", "hearts", "hearts", "hearts", "hearts"), 
+  value = c(13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 13, 12, 11, 10, 9, 8, 
+            7, 6, 5, 4, 3, 2, 1, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 13, 12, 11, 
+            10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+)
+
+my_super_cool_field_dataset
+
+# How many samples (rows) does it have?
+
+### LOAD DATA
+
+# .RData files 
+
+# Many ways to load data! 
+
+# Direct link 
+load("bla/bla/bla/bla/bla/bla/bla/bla/bla/THE_NAME_OF_THE_THING.RData")
+
+# Set working directory
+# - Manually 
+# - Script
+
+getwd()
+setwd("C:/Users/bla/bla/bla/bla/bla/bla/bla")
+
+setwd("C:/Users/David CM/Dropbox/DAVID DOC/LLAM al DIA/1. FEHM coses al DIA/6. Infinite R")
+
+load("1.load_data.RData")
+
+# LOOK AT THE CONSOLE!
+load("C:/Users/David CM/Dropbox/DAVID DOC/LLAM al DIA/1. FEHM coses al DIA/6. Infinite R/1.load_data.RData")
+
+
+# Managing datasets from excel to R
+
+# First - Folder with the data
+# PROJECTS
+
+getwd()
+
+# Manually 
+# Inside the script
+library(readxl)
+MyData <- read_excel("Folder with the data/MyData.xlsx")
+View(MyData)
+MyData
+
+# .csv (more stable)
+MyData <- read.csv2("Folder with the data/MyData.csv")
+str(MyData)
+
+MyData <- read.csv2("Folder with the data/MyData.csv",sep = ",",dec = ".")
+str(MyData)
+
+MyData <- read.csv2("Folder with the data/MyData.csv", sep = ";",dec = ".",
+                    col.names = c("Site","Wild","Taxa","Abun_L","Time"))
+str(MyData)
+
+colnames(MyData)
+colnames(MyData) <- c("Site","Wild","Taxa","Abun_L")
+str(MyData)
+
+MyData
+
+is.matrix(MyData)
+is.data.frame(MyData)
+
+# Last things before starting to "dig into it"
+
+### How to order stuff in R
+
+# Use headers! 
+# This is the title of what I will do below ####
+
+# Another title of another analysis ####
+
+# 1. Another title of another analysis ####
+
+#____________________________________________________________________________ lines 
+
+#____________________________________FINAL__________________________________####
+
+# Write next to the functions that you use, things about how you do it, why, whatever
+MyData <- read.csv2("Folder with the data/MyData.csv", sep = ";",dec = ".",header = F) # Here I load the data 
+colnames(MyData) <- MyData[1,]
+MyData <- MyData[-1,]
+# IMPORTANT: decimal is "."! 
+# Write down everything!!!!! Key for understanding what you did after 2 days have passed ;)  
+
+### The functions or operations
+## Load packages
+
+# Manually
+# Inside the script
+install.packages("babynames")
+library(babynames)
+# CRAN or websites for more info or even retrieve directly from GITHUB or similars
+
+
+### Data exploration
+extinction <- read.csv2("Data explor/extinction.csv", sep = ",",dec = ".")
+
+summary(extinction)
+
+plot(extinction)
+plot(extinction, col="red")
+str(extinction)
+
+head(extinction)
+
+hist(extinction$body_size)
+
+boxplot(extinction$extinction_risck, col="red")
+
+pairs(extinction)
+
+cor(extinction,method = "spearman")
+
+scatter.smooth(extinction, col="blue")
+
+pairs(extinction ,lower.panel = panel.smooth)
+
+corrmorant::corrmorant(extinction) # Install things from GitHub
+# https://github.com/r-link/corrmorant
+
+# One other way
+install.packages("readr")
+library(readr)
+
+extinction <- read_csv("Data explor/extinction.csv")
+?read_csv
+
+extinction
+
+# Deactivate the package 
+# Manually
+#In the script
+detach("package:readr", unload = TRUE)
+
+### Data management (one of the ways to do it)
+
+install.packages("tidyvierse")
+
+library(tidyverse)
+library(dplyr)
+
+# Working with dplyr package allows to work with data.frames and modify/change datasets inside R 
+
+# DATA MUST BE IN A TIDY FORMAT !!!! (rows = observations/samples) (colums = variables/others)
+
+# filter
+# select
+# arrange
+# mutate
+# summarise
+
+# All these comands are actions that can be performed in dplyr
+# First le's explore the data  
+library(babynames)
+
+data(babynames)
+babynames
+?babynames
+
+summary(babynames)
+
+plot(babynames$year, babynames$n)
+
+boxplot(babynames$n~babynames$sex)
+
+boxplot(log(babynames$n)~babynames$sex, col=c("red", "blue"))
+
+# Locating some values?
+max(babynames$n)
+min(babynames$n)
+
+which(babynames$n==max(babynames$n))
+
+babynames[which(babynames$n==max(babynames$n)),]
+
+# DPLYR functions are an easier setting to manage these data
+# Step by step, function by function of dplyr
+
+# FILTER
+#old way to use the same filter
+babynames[babynames$name=="Alice",]
+
+# with tidyverse
+filter(babynames, name== "Alice", sex=="F")
+
+filter(babynames, year>2016)
+
+filter(babynames, name %in% c("Ana", "Alice"))
+
+filter(babynames, sex=="F", prop>0.07)
+
+# SELECT
+
+select(babynames, year)
+
+select(babynames, -year)
+
+select(babynames, name, sex)
+
+select(babynames, 1:3)
+
+select(babynames, starts_with('n'))
+
+# ARRANGE
+
+arrange(babynames, prop)
+
+arrange(babynames, desc(prop)) # asc() is the default
+
+arrange(babynames, desc(name), desc(n))
+
+# MUTATE
+
+mutate(babynames, total=n/prop)
+
+mutate(babynames, prop = prop*100)
+
+mutate(babynames, year_diff=2018-year, months_diff=year_diff-12)
+
+mutate(
+  babynames,
+  dummy=if_else(sex=="F", "Femenino", "Masculino")# if_else IS BINNARY
+)
+
+mutate(
+  babynames,
+  dummy = case_when(
+    name == "Alice" ~ "Alicia",
+    name == "Anna" ~ "Anne",
+    name == "Emma" ~ "Emmmmah",
+    TRUE ~ "pues otro nombre"
+  )
+)
+
+# SUMMARISE 
+
+summarise(
+  babynames, 
+  mean= mean(year),
+  sd= sd(year)
+)
+
+# GROUP_BY
+
+by_year <- group_by(babynames, year)
+
+summarise(by_year, mean= mean(n))
+
+plot(summarise(by_year, mean= mean(n)))
+
+
+# Piping!
+
+
+babynames%>%
+  group_by(year)%>%
+  summarise(mean= mean(n))
+
+# Pipes connect each call that you do in "dplyr" is like saying 
+#     And then --- 
+#     And then --- 
+
+# Not using pipes
+summarise(
+  group_by(
+    filter(babynames, year == 1880), sex
+  ),
+  max = max(n),prop = max(prop))
+
+# Using them 
+
+year_1880 <- babynames %>%
+  filter(year == 1880) %>%
+  group_by(sex) %>%
+  summarise(max = max(n),prop = max(prop))
+
+
+babynames%>%
+  group_by(year, sex)%>%
+  arrange(desc(prop))%>%
+  summarise(max= max(prop),
+            name=first(name)) %>%
+  select(name, sex, year, max)
+
+
+### PLOT IN THE SAME ENVIRONMENT! 
+
+install.packages("ggplot2")
+library(ggplot2)
+
+years <- babynames %>%
+  filter(year == c(1880,1910,1950,1960)) %>%
+  group_by(year, sex) %>%
+  summarise(mean = mean(n))
+
+seq(1880, 2017, 10)
+
+years <- babynames %>%
+  filter(year == seq(1880, 2017, 10))%>%
+  group_by(year, sex) %>%
+  summarise(mean = mean(n))
+
+ggplot(data=years,
+       aes(x = year, y = mean))+
+  geom_point()
+
+
+# The final value!!!!
+
+babynames%>%
+  filter(year==seq(1880, 2017, 10))%>%
+  group_by(year, sex)%>%
+  summarise(mean = mean(n))%>%
+  ggplot(
+    aes(x = year, y = mean, color=sex))+
+  geom_point(size=5)+
+  geom_line()+
+  scale_color_manual(values=c("pink","blue"))+
+  theme_classic()
+
+
+#####__________________________________________________________________________________
+## TIME TO GO WILD! 
+
+MyData <- read.csv2("Folder with the data/MyData.csv",dec = ".")
+colnames(MyData) <- c("ID", "Wildfire","Taxa","AbundL","Time")
+str(MyData)
+head(MyData)
+
+Matriu_Ab_Spp <- MyData%>%
+  group_by(Wildfire,Time,Taxa)%>%
+  summarise(TotAbb=sum(AbundL))
+
+MyData%>%
+  mutate(AbundL=as.numeric(AbundL)) %>% 
+  mutate(Time = case_when(
+    Time == "1" ~ "Autum",
+    Time == "2" ~ "Winter",
+    Time == "3" ~ "Spring",
+    Time == "4" ~ "Summer",
+    TRUE ~ "pues otro nombre")) %>% 
+  group_by(Time, Wildfire,Taxa)%>%
+  summarise(TotAbb=sum(AbundL))%>%
+  mutate(PA=1)%>%
+  group_by(Time,Wildfire)%>%
+  summarise(Rich=sum(PA))%>%
+  ggplot(aes(x=Time, y=Rich, fill=Wildfire))+
+  geom_line(aes(col=Wildfire,group=Wildfire),size=2)+
+  geom_point(size=5, shape=21)+
+  scale_x_discrete(breaks=c("Autum","Winter","Spring","Summer"),
+                   limits=c("Autum","Winter","Spring","Summer"))+
+  theme_classic()
+
